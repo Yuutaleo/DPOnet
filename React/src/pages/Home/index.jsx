@@ -2,6 +2,7 @@ import './style.css'
 import { useEffect, useState, useRef } from 'react'
 import Trash from './assets/trash.svg'
 import api from '../../services/api'
+import AppRoutes from '../Rotas/Index'
 
 
 function Home() {
@@ -11,7 +12,7 @@ function Home() {
   const inputName = useRef()
   const inputAge = useRef()
   const inputEmail = useRef()
-
+  const inputPassword = useRef()
 
   async function getUsers() {
     const usersFromApi = await api.get('/users')
@@ -27,7 +28,8 @@ function Home() {
     await api.post('/users', {
       name: inputName.current.value,
       age: parseInt(inputAge.current.value),
-      email: inputEmail.current.value
+      email: inputEmail.current.value,
+      password: inputPassword.current.value
     });  
     getUsers(); 
   }
@@ -43,9 +45,10 @@ function Home() {
         <form >
           <h1>Cadastro de usuários</h1>
           <input placeholder='Nome' name='nome' type="text" ref={inputName} />
-          <input placeholder='Idade' name='idade' type="number" ref={inputAge} />
+          <input placeholder='Idade' name='idade' type="number" ref={inputAge} class="input-number" />
           <input placeholder='Email' name='email' type="email" ref={inputEmail} />
-          <button type='button' onClick={createUsers} >Cadastrar</button>
+          <input placeholder='Senha' name='senha' type="password" ref={inputPassword} />
+          <button type='button' onClick={createUsers}  >Cadastrar</button>
         </form>
 
         {users.map(user => (
