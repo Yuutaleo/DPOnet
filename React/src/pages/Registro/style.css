@@ -1,0 +1,73 @@
+.tabela-usuarios {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.botao {
+    background-color: #00b377;
+    border: none;
+    padding: 20px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao2 {
+    background-color: #00b377;
+    border: none;
+    padding: 20px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao:hover {
+    opacity: 0.8;
+}
+
+h1 {
+    color: black;
+}
+
+.tabela-usuarios th,
+.tabela-usuarios td {
+    border: 1px solid #51e765;
+    padding: 12px 10px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.tabela-usuarios th {
+    background-color: #00b377;
+    color: black;
+    font-weight: bold;
+}
+
+.tabela-usuarios tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabela-usuarios button {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.tabela-usuarios button:hover {
+    background-color: #cc0000;
+}
+
+.botao-revogar {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
